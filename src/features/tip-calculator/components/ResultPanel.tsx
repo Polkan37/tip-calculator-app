@@ -11,6 +11,7 @@ export function ResultPanel({
   canReset,
   onReset,
 }: ResultPanelProps) {
+
   return (
     <div className="receipt">
       <div className="receipt__text">

@@ -230,14 +230,14 @@ body, #root {
   letter-spacing: 0px;
   color: #085C61;
   text-transform: uppercase;
-  cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 .calculator .receipt__buttons button.button--active {
   background: #26C2AE;
   color: #00474B;
+  cursor: pointer;
 }
-.calculator .receipt__buttons button:active, .calculator .receipt__buttons button:hover {
+.calculator .receipt__buttons button.button--active:active, .calculator .receipt__buttons button.button--active:hover {
   background: #9FE8DF;
   color: #00474B;
 }

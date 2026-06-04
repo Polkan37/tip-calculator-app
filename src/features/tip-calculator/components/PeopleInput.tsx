@@ -11,7 +11,7 @@ export function PeopleInput({ value, error, onChange }: PeopleInputProps) {
   return (
     <TextField
       id="people"
-      label="People"
+      label="Number of People"
       value={value}
       icon={dollarIcon}
       error={error}

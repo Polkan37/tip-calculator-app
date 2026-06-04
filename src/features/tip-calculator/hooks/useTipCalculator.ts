@@ -41,7 +41,10 @@ export function useTipCalculator() {
     setValues(initialValues);
   };
 
-  const canReset = Object.values(values).some(Boolean);
+  const canReset =
+    Boolean(values.bill) ||
+    Boolean(values.tipValue) ||
+    Boolean(values.peopleCount);
 
   return {
     values,

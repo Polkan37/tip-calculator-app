@@ -32,7 +32,7 @@ export function TextField({
         id={id}
         type="number"
         value={value}
-        placeholder={placeholder ?? label}
+        placeholder={placeholder ?? '0' }
         onChange={(event) => onChange(event.target.value)}
       />
     </div>
