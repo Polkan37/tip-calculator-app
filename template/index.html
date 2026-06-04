@@ -1,44 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.svg">
+  <title>Tip calculator app</title>
+  <link rel="stylesheet" href="./styles/index.css">
 </head>
+
 <body>
+  <header class="header">
+    <h1>
+      <img src="./images/logo.svg" alt="Tip calculator">
+    </h1>
+  </header>
+  <main class="main">
+    <section class="calculator">
+      <form class="form">
+        <div class="form__input valid">
+          <p class="form__label">
+            <span>Bill</span>
+            <span class="error"></span>
+          </p>
+          <img src="./images/icon-dollar.svg" alt="" class="form__icon">
+          <input type="number" id="bill" placeholder="0" />
+        </div>
 
-  Bill
+        <div class="form__input">
+          <p class="form__label">Select Tip %</p>
+          <div class="form__options">
+            <button>5%</button>
+            <button>10%</button>
+            <button class="active">15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <input type="number" id="custom-tip" placeholder="Custom" />
+            <img src="./images/icon-dollar.svg" alt="" class="form__icon">
+          </div>
+        </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
+        <div class="form__input invalid">
+          <p class="form__label">
+            <span>Number of People</span>
+            <span class="error">Can't be zero</span>
+          </p>
+          <img src="./images/icon-person.svg" alt="" class="form__icon">
+          <input type="number" id="people" placeholder="0" />
+        </div>
+      </form>
+      <div class="receipt">
+        <div class="receipt__text">
+          <div class="receipt__field">
+            <div class="receipt__title">
+              <p>Tip Amount</p>
+              <span>/ person</span>
+            </div>
+            <span class="receipt__value">$41.18</span>
+          </div>
+          <div class="receipt__field">
+            <div class="receipt__title">
+              <p>Total</p>
+              <span>/ person</span>
+            </div>
+            <span class="receipt__value">$513.70</span>
+          </div>
+        </div>
+        <div class="receipt__buttons">
+          <button class="button button--active">Reset</button>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
+
 </html>
